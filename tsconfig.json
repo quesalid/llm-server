@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Node 16",
+  "_version": "16.1.0",
+  "compilerOptions": {
+    "lib": [ "es2021", "ES6" ],
+    "module": "NodeNext",
+    "target": "ES6",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node16",
+    "allowJs": true,
+    "isolatedModules": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "strictPropertyInitialization": false,
+    "outDir": "dist"
+  },
+  "include": [ "**/*.ts" ],
+  "exclude": [ "node_modules" ]
+}

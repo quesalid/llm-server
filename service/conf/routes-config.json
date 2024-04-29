@@ -1,0 +1,45 @@
+[
+  {
+    "url": "/cmd/testApi",
+    "creditCheck": true,
+    "bodyparser": "json",
+    "controller": {
+      "callback": "testApi",
+      "method": "POST"
+    }
+  },
+  {
+    "url": "/cmd/logout",
+    "auth": true,
+    "creditCheck": true,
+    "bodyparser": "json",
+    "controller": {
+      "callback": "logout",
+      "method": "GET"
+    }
+  },
+  {
+    "url": "/cmd/command",
+    "auth": true,
+    "creditCheck": true,
+    "bodyparser": "json",
+    "controller": {
+      "callback": "restCommand",
+      "method": "POST"
+    }
+  },
+  {
+    "url": "/lom/login",
+    "auth": false,
+    "creditCheck": false,
+    "bodyparser": "json",
+    "controller": {
+      "callback": "login",
+      "method": "POST",
+      "options": {
+        "target": "https://127.0.0.1:3000/getidentity",
+        "authport": 3000
+      }
+    }
+  }
+]

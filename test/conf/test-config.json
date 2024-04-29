@@ -1,0 +1,12 @@
+{
+  "HOST": "127.0.0.1",
+  "PORT": 4003,
+  "HTTPS": true,
+  "LOGINURL": "https://127.0.0.1:3003",
+  "APIKEY": "tcptqv2e4psu8g4w4co2v9ossx0jao",
+  "JEST_HTML_REPORTERS_CUSTOM_INFOS": {
+    "Customer": "ALFASIGMA",
+    "Device": "127.0.0.1",
+    "Executed": "P. Pulicani"
+  }
+}
