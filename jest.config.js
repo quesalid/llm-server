@@ -6,7 +6,7 @@ const config = {
       "jest-html-reporters",
       {
         pageTitle: "LOM API TEST",
-        logoImgPath: "test/Living.png",
+        logoImgPath: "test/TestIcon.png",
         inlineSource: true,
         customInfos: [
           { title: "Customer", value: "Liv.In.G." },
