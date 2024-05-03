@@ -1,0 +1,10 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\service",
+    "\\service\\lib",
+    "\\service\\lib\\db\\llm"
+  ],
+  "SelectedNode": "\\tsconfig.json",
+  "PreviewInSolutionExplorer": false
+}

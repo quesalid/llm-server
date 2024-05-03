@@ -25,7 +25,7 @@ const testApi = async function (req:any) {
     });
 };
 
-const restCommand = async function (req:any, options:any) {
+const restCommand = async function (req: any, options: any) {
     return new Promise(async (resolve, reject) => {
         try {
             let ret = await db.restCommand(req, options);

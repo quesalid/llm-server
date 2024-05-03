@@ -135,7 +135,7 @@ const apiServ = async () => {
                 setupCreditCheck(app, ROUTES);
             }
             // ROUTES
-            logger.info("USE ROUTE WITH DBTYPE: [" + process.env.DBTYPE + "]");
+            logger.info("USE ROUTE WITH MODELTYPE: [" + process.env.MODELTYPE + "]");
             await setupRouter(app, ROUTES);
             logger.info("USE ROUTE CONNECTED WITH DATABASE");
             // ERROR HANDLER
@@ -164,7 +164,7 @@ const apiServ = async () => {
             }
             server.listen(port, process.env.SERVERHOST, () => {
                 logger.info("*******************************");
-                logger.info("     API SERVER  v." + version);
+                logger.info("     LLM SERVER  v." + version);
                 if (process.env.TARGETSTATUS == 'development')
                     logger.info("STARTING MODE: development")
                 else
@@ -172,9 +172,9 @@ const apiServ = async () => {
                 logger.info("BINDING ON HOST: " + process.env.SERVERHOST)
                 logger.info(process.env.HTTPTYPE + ' SERVER: listening on port ' + process.env.HTTPPORT);
                 logger.info('STARTED IN MODE ** ' + process.env.TARGETSTATUS + ' **');
-                logger.info('SERVER: started with DB ' + process.env.DBTYPE);
-                if (process.env.DBTYPE == 'torm')
-                    logger.info('SERVER: started with SUBDBTYPE ' + process.env.DBTYPE_SUBTYPE);
+                logger.info('SERVER: started with MODEL ' + process.env.MODELTYPE);
+                if (process.env.MODELTYPE == 'llm')
+                    logger.info('SERVER: started with SUBMODELTYPE ' + process.env.MODELTYPE_SUBTYPE);
                 logger.info("*******************************");
             });
         })

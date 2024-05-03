@@ -1,6 +1,6 @@
 import express from "express";
 import controller from "../controller/Controller.js";
-import tormdb from "../db/typeorm/tormdb.js"
+import llmdb from "../db/llm/llmdb.js"
 
 /*
  * Cretaes callback from controllers
@@ -18,15 +18,14 @@ const createRouterCallback = (callback:string, options:any) => {
 };
 
 const initController = async () => {
-    // ADD HERE
-    switch (process.env.DBTYPE) {
-        case "torm":
-            const subtype = process.env.DBTYPE_SUBTYPE || 'sqlite'
-            await controller.init(tormdb, subtype);
-            break;
-        default:
-            await controller.init(tormdb, 'sqlite');
-            break;
+    try {
+        if (process.env.MODELTYPE) {
+            await controller.init(llmdb, process.env.MODELTYPE_SUBTYPE);
+        } else {
+            throw("NO_MODEL_SPECIFIED")
+        }
+    } catch (error) {
+        throw(error)
     }
 };
 
