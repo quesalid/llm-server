@@ -131,3 +131,6 @@ dist
 
 # test Directory
 test
+
+# jset report filr
+jest_html_reporters.html
