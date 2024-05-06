@@ -14,6 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "@langchain/community": "^0.0.54",
+    "chromadb": "^1.8.1",
     "client-oauth2": "^4.3.3",
     "cors": "^2.8.5",
     "express": "^4.18.2",
@@ -22,6 +23,7 @@
     "https": "^1.0.0",
     "install": "^0.13.0",
     "jsonwebtoken": "^9.0.0",
+    "langchain": "^0.1.36",
     "memorystore": "^1.6.7",
     "minimist": "^1.2.8",
     "morgan": "^1.10.0",
@@ -30,6 +32,7 @@
     "nodemailer": "^6.9.1",
     "npm": "^10.7.0",
     "papaparse": "^5.4.0",
+    "pdf-parse": "^1.1.1",
     "pg": "^8.11.3",
     "uuid": "^9.0.0",
     "winston": "^3.8.2",

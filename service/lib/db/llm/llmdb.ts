@@ -54,10 +54,97 @@ const loadModel = async (cmd: any, chkperm: any) => {
     })
 }
 
+const loadChat = async (cmd: any, chkperm: any) => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            const ret: any = await llmchain.loadChat(cmd.options)
+            const response = {
+                type: cmd.type,
+                version: cmd.version,
+                command: cmd.command,
+                result: true,
+                error: null,
+                data: ret,
+            };
+
+            resolve(response);
+        } catch (error) {
+            console.log(error)
+            reject(error)
+        }
+    })
+}
+
+const setDocumentLoader = async (cmd: any, chkperm: any) => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            const ret: any = await llmchain.setDocumentLoader(cmd.options)
+            const response = {
+                type: cmd.type,
+                version: cmd.version,
+                command: cmd.command,
+                result: true,
+                error: null,
+                data: ret,
+            };
+
+            resolve(response);
+        } catch (error) {
+            console.log(error)
+            reject(error)
+        }
+    })
+}
+
+const loadVectorStoreFromDirectory = async (cmd: any, chkperm: any) => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            const ret: any = await llmchain.loadVectorStoreFromDirectory(cmd.options)
+            const response = {
+                type: cmd.type,
+                version: cmd.version,
+                command: cmd.command,
+                result: true,
+                error: null,
+                data: ret,
+            };
+
+            resolve(response);
+        } catch (error) {
+            console.log(error)
+            reject(error)
+        }
+    })
+}
+
+const loadVectorStoreFromCollection = async (cmd: any, chkperm: any) => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            const ret: any = await llmchain.loadVectorStoreFromDirectory(cmd.options)
+            const response = {
+                type: cmd.type,
+                version: cmd.version,
+                command: cmd.command,
+                result: true,
+                error: null,
+                data: ret,
+            };
+
+            resolve(response);
+        } catch (error) {
+            console.log(error)
+            reject(error)
+        }
+    })
+}
+
 const llmdb = {
     init,
     login,
-    loadModel
-    
+    loadModel,
+    loadChat,
+    setDocumentLoader,
+    loadVectorStoreFromDirectory,
+    loadVectorStoreFromCollection
 };
 export default llmdb;

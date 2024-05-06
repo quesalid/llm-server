@@ -2,9 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\service",
+    "\\service\\conf",
     "\\service\\lib",
-    "\\service\\lib\\db\\llm"
+    "\\service\\lib\\controller",
+    "\\service\\lib\\db",
+    "\\service\\lib\\db\\llm",
+    "\\service\\lib\\router",
+    "\\test",
+    "\\test\\conf"
   ],
-  "SelectedNode": "\\tsconfig.json",
+  "SelectedNode": "\\service\\lib\\db\\llm\\llmchain.ts",
   "PreviewInSolutionExplorer": false
 }
